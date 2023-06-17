@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+#calculator {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+input,
+select {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#tip-amount,
+#total-amount {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #172a45;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in;
+  margin-top: 20px;
+}
+
+/* Style the footer text */
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Style the social icons container */
+.social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style the social icons */
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+/* Style the LinkedIn icon */
+.social-icons a.linkedin:hover {
+  color: #0077b5;
+}
+
+/* Style the Twitter icon */
+.social-icons a.twitter:hover {
+  color: #1da1f2;
+}
+
+/* Style the Email icon */
+.social-icons a.email:hover {
+  color: #ea4335;
+}
+
+/* Add animation to the social icons on hover */
+.social-icons a:hover {
+  animation: bounce 0.5s infinite;
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+  /* No specific changes for this screen size */
+}
+
+/* Styles for screens from 768px to 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #calculator {
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+/* Styles for screens from 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  #calculator {
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Styles for screens up to 575px */
+@media (max-width: 575px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  #calculator {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  #tip-amount,
+  #total-amount {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
