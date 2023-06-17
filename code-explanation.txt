@@ -1,0 +1,102 @@
+HTML:
+
+This code is an HTML document that represents a web page for a tip calculator. Let's go through the different parts of the code:
+
+1. `<!DOCTYPE html>`: This is the document type declaration and specifies that the document is an HTML5 document.
+
+2. `<html>`: The root element of an HTML page.
+
+3. `<head>`: Contains meta-information about the HTML document, such as the character encoding and the title of the page.
+
+   - `<meta charset="UTF-8">`: Specifies the character encoding of the document to be UTF-8, which supports a wide range of characters and is commonly used for multilingual websites.
+  
+   - `<title>Tip Calculator</title>`: Sets the title of the web page, which is displayed in the browser's title bar or tab.
+
+   - `<link rel="stylesheet" href="styles.css">`: Links an external CSS file named "styles.css" to the HTML document, allowing the styles defined in the CSS file to be applied to the HTML elements.
+
+   - `<script src="https://kit.fontawesome.com/7624c7c0d1.js" crossorigin="anonymous"></script>`: Loads an external JavaScript file from the provided URL. This script is used to include the Font Awesome icon library in the web page, allowing the use of icons in the social media links.
+
+4. `<body>`: Contains the visible content of the web page.
+
+   - `<h1>Tip Calculator</h1>`: Displays a heading with the text "Tip Calculator".
+
+   - `<div id="calculator">`: Represents the container for the tip calculator form.
+
+     - The following code blocks define form elements such as labels, input fields, and a select dropdown for bill amount, tip percentage, and currency selection.
+
+   - `<button id="calculate-button">Calculate Tip</button>`: Displays a button with the text "Calculate Tip" that users can click to calculate the tip amount and total amount.
+
+   - `<div id="tip-amount"></div>`: Represents a container where the calculated tip amount will be displayed.
+
+   - `<div id="total-amount"></div>`: Represents a container where the calculated total amount (bill amount + tip) will be displayed.
+
+  - `<footer>`: Represents the footer section of the web page.
+
+     - `<p>&copy; 2023 Olaoluwa Akinfenwa. All rights reserved.</p>`: Displays a paragraph with copyright information.
+
+     - `<div class="social-icons">`: Represents a container for social media icons.
+
+       - The following code blocks define social media links (LinkedIn, Twitter, and Email) with corresponding icons from the Font Awesome icon library.
+
+  - `<script src="script.js"></script>`: Links an external JavaScript file named "script.js" to the HTML document, allowing custom JavaScript code to be executed.
+
+This HTML code provides the structure and content for a web page that includes a tip calculator form and social media links.
+
+CSS: 
+
+The code is a CSS stylesheet that contains various style rules for different elements of the web page. Let's break down the code and explain each part:
+
+1. Global Styles:
+   - `body`: Sets the font family to Arial or sans-serif, aligns the text in the center, sets the background color to #f1f1f1 (light gray), sets the text color to #333 (dark gray), and adds padding of 20 pixels to all sides.
+   - `h1`: Sets a margin-top of 20 pixels and a font size of 32 pixels.
+
+2. Styles for the Tip Calculator:
+   - `#calculator`: Sets the background color to #fff (white), adds a border radius of 4 pixels, adds padding of 30 pixels, sets the maximum width to 400 pixels, and centers the calculator by setting the left and right margins to "auto".
+   - `label`: Displays labels as block-level elements, adds a bottom margin of 10 pixels, sets the font size to 18 pixels, sets the font weight to bold, and aligns the text to the left.
+   - `input` and `select`: Sets the padding to 12 pixels, adds a border radius of 4 pixels, adds a border of 1 pixel solid #ccc (light gray), sets the width to 100%, sets the font size to 16 pixels, adds a bottom margin of 10 pixels, adds a transition effect for the border color change, and ensures the box-sizing is set to "border-box".
+   - `input:focus` and `select:focus`: Removes the default focus outline and sets the border color to #4CAF50 (green) when the elements are in focus.
+   - `button`: Sets the padding to 10 pixels vertically and 20 pixels horizontally, sets the font size to 18 pixels, sets the background color to #4CAF50 (green), sets the text color to white, removes the border, adds a border radius of 4 pixels, sets the cursor to "pointer", adds a transition effect for the background color change, and adds a top margin of 10 pixels. Additionally, when hovering over the button, the background color changes to #45a049 (darker green).
+   - `#tip-amount` and `#total-amount`: Sets the font size to 24 pixels and adds a top margin of 20 pixels.
+
+3. Footer Styles:
+   - `footer`: Sets the background color to #172a45 (dark blue), sets the text color to white, adds padding of 20 pixels, aligns the text in the center, adds a border-radius of 10 pixels to the bottom corners, adds a box-shadow at the bottom, applies a fade-in animation with a duration of 1 second, and adds a top margin of 20 pixels.
+   - `footer p`: Sets the margin to 0 and the font size to 14 pixels.
+
+4. Animation Keyframes:
+   - `@keyframes fadeIn`: Defines a fade-in animation with keyframes from opacity 0 to opacity 1.
+   - `@keyframes slideIn`: Defines a slide-in animation with keyframes from a translation of -20 pixels in the y-axis and opacity 0 to no translation and opacity 1.
+
+5. Social Icons Styles:
+   - `.social-icons`: Adds a top margin of 20 pixels and aligns the text in the center.
+   - `.social-icons a`: Displays the social media icons as inline-block elements, adds a right margin of 10 pixels, sets the color to white, sets the font size to 24 pixels, and adds a transition effect for the color change.
+   - `.social-icons a.linkedin:hover`, `.social
+
+-icons a.twitter:hover`, `.social-icons a.email:hover`: Sets specific styles for each social media icon when hovered.
+
+6. Media Queries:
+   - Styles for screens larger than 1200px, screens from 768px to 1199px, screens from 576px to 767px, and screens up to 575px are defined within the corresponding `@media` queries. These styles modify the layout and appearance of elements for different screen sizes. For example, adjusting the maximum width, font size, and padding to create a responsive design.
+
+The CSS code is responsible for the visual styling of the tip calculator web page, including fonts, colors, spacing, animations, and responsiveness.
+
+JavaScript:
+
+This code is a JavaScript snippet that performs calculations and updates the tip and total amounts displayed on a web page. Let's break down the code and explain each part:
+
+1. `var currencySymbols`: This is an object that maps currency codes to their respective symbols. Each property represents a currency code (e.g., USD, EUR) and its corresponding symbol (e.g., "$", "€"). This object is used to display the currency symbol alongside the tip and total amounts.
+
+2. `function calculateTip()`: This is a function that performs the calculation of the tip and total amounts based on the user input. It is executed when the "calculate" button is clicked.
+
+   - `var billAmount`: Retrieves the value entered in the "bill-amount" input field and converts it to a floating-point number using `parseFloat()`.
+   - `var tipPercentage`: Retrieves the value entered in the "tip-percentage" input field and converts it to a floating-point number using `parseFloat()`.
+   - `var selectedCurrency`: Retrieves the selected value from the "currency-select" dropdown menu.
+
+   - Next, there's a check to ensure that both the bill amount and tip percentage are valid numbers. If either of them is not a valid number (e.g., empty field or non-numeric input), an alert message is displayed, and the function returns early.
+
+   - The tip amount is calculated by multiplying the bill amount by the tip percentage divided by 100.
+   - The total amount is calculated by adding the bill amount to the tip amount.
+
+   - Finally, the tip and total amounts are updated in the HTML document. The `textContent` property of the "tip-amount" and "total-amount" elements is set to display the calculated amounts, along with the currency symbol corresponding to the selected currency code. The `toFixed(2)` method is used to round the amounts to two decimal places.
+
+3. `document.getElementById("calculate-button").addEventListener("click", calculateTip);`: This line adds an event listener to the "calculate-button" element. It listens for a "click" event and executes the `calculateTip()` function when the button is clicked.
+
+Overall, this JavaScript code retrieves user input, performs the tip calculation, updates the displayed amounts, and provides error handling for invalid input. It enables the functionality of the tip calculator on the web page.
